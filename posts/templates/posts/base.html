@@ -19,15 +19,16 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link" href="#">Link1</a>
+              <a class="nav-link" href="{% url 'about' %}">About</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Link2</a>
+                <a class="nav-link" href="{% url 'by' %}">By</a>
             </li>
           </ul>
           <form class="form-inline my-2 my-lg-0" required action="{% url 'search' %}" method="GET">
-            <input class="form-control mr-sm-2" type="text" name="search" placeholder="Search" aria-label="Search" required>
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            <input class="form-control mr-sm-2" type="text" name="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="searchbutton">Search</button>
+            <!-- TO DO: ADD JS TO CLEAR SEARCH BOX AFTER BUTTON IS CLICKED -->
           </form>
         </div>
       </nav>
