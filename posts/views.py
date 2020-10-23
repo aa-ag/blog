@@ -3,7 +3,7 @@ from .models import Post
 
 def home(request):
 
-    posts = Post.objects.order_by('published_date')
+    posts = Post.objects.order_by('-published_date')
 
     context = {'posts': posts}
 
