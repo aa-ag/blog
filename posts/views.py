@@ -35,10 +35,3 @@ def search(request):
             return render(request, 'posts/results.html', context)
         else:
             return HttpResponse("<h3>Go back! Result not found... 🕺</h3>")
-
-
-def about(request):
-    return render(request, 'posts/about.html')
-
-def by(request):
-    return render(request, 'posts/by.html')
