@@ -120,6 +120,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+# TO DO: ADD STATIC FILES
+
 MEDIA_URL = '/pics/'
 
 MEDIA_ROOT = BASE_DIR
