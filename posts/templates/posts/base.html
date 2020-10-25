@@ -29,10 +29,9 @@
 						<a class="nav-link" href="{% url 'credentials' %}">Credentials</a>
 					</li>
 				</ul>
-				<form class="form-inline my-2 my-lg-0" required action="{% url 'search' %}" method="GET">
-					<input class="form-control mr-sm-2" type="text" name="search" placeholder="Search" aria-label="Search">
-					<button class="btn btn-outline-white text-white bg-danger my-2 my-sm-0" type="submit" id="searchbutton">Search</button>
-					<!-- TO DO: ADD JS TO CLEAR SEARCH BOX AFTER BUTTON IS CLICKED -->
+				<form class="form-inline my-2 my-lg-0" action="{% url 'search' %}" method="GET">
+					<input class="form-control mr-sm-2" type="text" name="search" placeholder="Search" aria-label="Search" required>
+					<button class="btn btn-outline-white text-white bg-danger my-2 my-sm-0" type="submit" id="searchbutton" onclick="clear();">Search</button>
 				</form>
 			</div>
 		</nav>
