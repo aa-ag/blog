@@ -4,38 +4,35 @@
 
 <div class="container">
 
-    <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-          <h1 class="display-4">This is Aaron's Blog!</h1>
-          <p class="lead">Words words words words words words words words.</p>
-        </div>
-      </div>
+		<div class="jumbotron jumbotron-fluid">
+				<div class="container">
+					<h1 class="display-4">This is Aaron's Blog!</h1>
+					<p class="lead">Words words words words words words words words.</p>
+				</div>
+				<h3>Here are my latest posts:</h3>
+		</div>
 
-    <h3>Here are my latest posts:</h3>
+		{% for post in posts.all %}
 
-    {% for post in posts.all %}
+		<div class="content">
+				<h4><a href="{% url 'post_details' post.id %}">{{ post.title }}</a></h4>
 
-    <div>
-        <h4><a href="{% url 'post_details' post.id %}">{{ post.title }}</a></h4>
+				<div>
+						<span>
+								<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-calendar3" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z"/>
+								<path fill-rule="evenodd" d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+								</svg>
+						</span>
+						<span>{{ post.pub_date_clean }}</span>
+				</div>
 
-        <div>
-            <span>
-                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-calendar3" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z"/>
-                <path fill-rule="evenodd" d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
-                </svg>
-            </span>
-            <span>{{ post.pub_date_clean }}</span>
-        </div>
+				<div><img src="{{ post.image.url }}" alt="..." class="img-responsive center-block" style="max-height:250px;"></div><br>
 
-        <div><img src="{{ post.image.url }}" alt="..." class="img-responsive center-block" style="max-height:250px;"></div><br>
+			 <div><p>{{ post.summary }}</p></div>
+		</div>
 
-       <div><p>{{ post.summary }}</p></div>
-    </div>
-
-    <hr>
-
-    {% endfor %}
+		{% endfor %}
 
 </div>
 
