@@ -13,4 +13,4 @@ urlpatterns = [
     path('about/', sitepages.views.about, name='about'),
     path('by/', sitepages.views.by, name='by'),
     path('credentials/', sitepages.views.credentials, name='credentials'),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) 
