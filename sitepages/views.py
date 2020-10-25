@@ -3,13 +3,13 @@ import requests
 
 def about(request):
     """
-    Render about page
+    Render 'about' page
     """
     return render(request, 'about.html')
 
 def by(request):
     """
-    Render by page
+    Render 'by' page
     """
     return render(request, 'by.html')
 
