@@ -9,6 +9,10 @@
   font-size: 15px;
 }
 
+.container {
+  max-width: 600px;
+}
+
 .content, .jumbotron {
     border-radius: 6px;
     box-shadow: 1px 5px 13px 5px rgba(8, 152, 255, 0.132);
@@ -31,6 +35,7 @@ b {
 
 img {
   border-radius: 4px;
+  max-width: 100%;
 }
 
 .title > a {
