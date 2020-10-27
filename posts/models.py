@@ -12,7 +12,7 @@ class Post(models.Model):
         return self.title
 
     def pub_date_clean(self):
-        return self.published_date.strftime('%b %e %Y')
+        return self.published_date.strftime('%b %e, %Y')
 
     def summary(self):
         return self.body[:100] + "..."

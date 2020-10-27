@@ -17,10 +17,18 @@
     background-color: #ffffff;
 }
 
+h3 {
+  margin-left: 1vw;
+}
+
 body {
   background-color: rgba(236, 236, 236, 0.835);
 }
 
 b {
-    text-decoration: underline;
+  text-decoration: underline;
+}
+
+img {
+  border-radius: 4px;
 }

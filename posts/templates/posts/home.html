@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<div class="container home">
+<div class="container">
 
 		<div class="jumbotron jumbotron-fluid">
 				<div class="container">
@@ -15,7 +15,7 @@
 		{% for post in posts.all %}
 
 		<div class="content">
-				<h4><a href="{% url 'post_details' post.id %}">{{ post.title }}</a></h4>
+				<h4 class="title"><a href="{% url 'post_details' post.id %}">{{ post.title }}</a></h4>
 
 				<div>
 						<span>
