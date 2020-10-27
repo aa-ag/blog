@@ -32,3 +32,11 @@ b {
 img {
   border-radius: 4px;
 }
+
+.title > a {
+  font-size: larger;
+  color: #ffffff;
+  background-color: rgba(17, 148, 43, 0.892);
+  padding: 1px 10px 1px 10px;
+  border-radius: 8px;
+}
