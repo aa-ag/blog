@@ -11,8 +11,8 @@ class Post(models.Model):
     def __str__(self):
         return self.title
 
-    # def pub_date_clean(self):
-    #     return self.published_date.strftime('%b %e, %Y')
+    def pub_date_clean(self):
+        return self.published_date.strftime('%b %e, %Y')
 
     def summary(self):
         return self.body[:100] + "..."
