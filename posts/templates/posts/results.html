@@ -3,15 +3,18 @@
 
 <div class="container">
     <div class="content">
-    <h4>Here are the most relevant results for your search:</h4>
-        
-        {% for i in result %}
-            <div>
-                <a href="{% url 'post_details' i.id %}">
-                    {{i.title}}
-                </a>
-            </div>
-        {% endfor %}
+    <h4>Here are the most relevant results for your search:</h4>  
+        <div class="results">
+            <ol>
+                {% for i in result %}
+                    <li>
+                        <a href="{% url 'post_details' i.id %}">
+                            {{i.title}}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ol>
+        </div>
     </div>
 </div>
 {% endblock %}

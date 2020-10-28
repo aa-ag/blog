@@ -45,3 +45,12 @@ img {
   padding: 1px 10px 1px 10px;
   border-radius: 8px;
 }
+
+.results {
+  background-color: rgba(245, 245, 245, 0.707);
+}
+
+.results > a {
+  color: black;
+  font-weight: 600;
+}
